@@ -32,4 +32,18 @@ public void testReversed1() {
   int[] input1 = { 3, 4, 5 };
   assertArrayEquals(new int[]{ 5, 4, 3 }, ArrayExamples.reversed(input1));
 }
+
+
+@Test
+public void testAvergeWithoutLowest() {
+  double[] input1 = {2, 5, 5 };
+  assertEquals(5, ArrayExamples.averageWithoutLowest(input1), 0.01);
+}
+
+//testing what happens if the result is an empty array
+@Test
+public void testAvergeWithoutLowest1() {
+  double[] input1 = { };
+  assertEquals(0, ArrayExamples.averageWithoutLowest(input1), 0.01);
+}
 }
